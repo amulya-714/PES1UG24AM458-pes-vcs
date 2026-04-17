@@ -37,12 +37,11 @@ The object store saves every file by its SHA-256 hash. The first two characters 
 
 ### Screenshot 1A — `./test_objects` passing
 
-> ![alt text](<Screenshot 2026-04-17 at 17.33.08.png>)
+> ![test_objects passing](screenshots/Screenshot%202026-04-17%20at%2017.33.08.png)
 
 ### Screenshot 1B — Object store directory structure
 
-> ![alt text](<Screenshot 2026-04-17 at 17.33.25.png>)
-
+> ![directory structure](screenshots/Screenshot%202026-04-17%20at%2017.33.25.png)
 ---
 
 ## Phase 2: Tree Objects
@@ -55,11 +54,11 @@ A tree object represents a directory snapshot. Each entry in the tree contains a
 
 ### Screenshot 2A — `./test_tree` passing
 
-> ![alt text](<Screenshot 2026-04-17 at 17.39.29.png>)
+> ![test_tree passing](screenshots/Screenshot%202026-04-17%20at%2017.39.29.png)
 
 ### Screenshot 2B — `xxd` of a raw tree object
 
-> ![alt text](<Screenshot 2026-04-17 at 17.56.41.png>)
+> ![xxd tree](screenshots/Screenshot%202026-04-17%20at%2017.56.41.png)
 
 ---
 
@@ -73,7 +72,7 @@ The index is a text-based file at `.pes/index`. Each line stores: `<mode> <hash-
 
 ### Screenshot 3A — `pes init` → `pes add` → `pes status` sequence
 
-> ![alt text](<Screenshot 2026-04-17 at 17.57.10.png>)
+> ![pes status](screenshots/Screenshot%202026-04-17%20at%2017.57.10.png)
 ```
 ./pes init
 echo "hello" > file1.txt
@@ -84,7 +83,7 @@ echo "world" > file2.txt
 
 ### Screenshot 3B — `cat .pes/index`
 
-> ![alt text](<Screenshot 2026-04-17 at 17.57.25.png>)
+> ![cat index](screenshots/Screenshot%202026-04-17%20at%2017.57.25.png)
 
 ---
 
@@ -100,7 +99,7 @@ The commit chain forms a singly linked list on disk: each commit points back to 
 
 ### Screenshot 4A — `./pes log` showing three commits
 
-> ![alt text](<Screenshot 2026-04-17 at 17.57.46.png>)
+> ![pes log](screenshots/Screenshot%202026-04-17%20at%2017.57.46.png)
 ```
 ./pes init
 echo "Hello" > hello.txt
@@ -120,11 +119,11 @@ echo "Goodbye" > bye.txt
 
 ### Screenshot 4B — `find .pes -type f | sort` showing object growth
 
-> ![alt text](<Screenshot 2026-04-17 at 17.58.07.png>)
+> ![object growth](screenshots/Screenshot%202026-04-17%20at%2017.58.07.png)
 
 ### Screenshot 4C — `cat .pes/refs/heads/main` and `cat .pes/HEAD`
 
-> ![alt text](<Screenshot 2026-04-17 at 17.58.22.png>)
+> ![refs and head](screenshots/Screenshot%202026-04-17%20at%2017.58.22.png)
 
 ---
 
@@ -132,8 +131,8 @@ echo "Goodbye" > bye.txt
 
 ### Screenshot — `make test-integration` passing
 
-> ![alt text](<Screenshot 2026-04-17 at 18.00.22.png>)
-> ![alt text](<Screenshot 2026-04-17 at 18.00.37.png>)
+> ![integration test 1](screenshots/Screenshot%202026-04-17%20at%2018.00.22.png)
+> ![integration test 2](screenshots/Screenshot%202026-04-17%20at%2018.00.37.png)
 
 ---
 
